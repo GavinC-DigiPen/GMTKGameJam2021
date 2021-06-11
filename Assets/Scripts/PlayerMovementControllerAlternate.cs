@@ -147,8 +147,8 @@ public class PlayerMovementControllerAlternate : MonoBehaviour
             turnDirection = -1;
         }
 
-        Debug.Log(rightDotTarget);
-        Debug.Log(turnDirection);
+        //Debug.Log(rightDotTarget);
+        //Debug.Log(turnDirection);
         return turnDirection;
     }
 
