@@ -1817,7 +1817,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -2608,8 +2608,8 @@ GameObject:
   - component: {fileID: 1714852457}
   - component: {fileID: 1714852460}
   - component: {fileID: 1714852459}
-  - component: {fileID: 1714852461}
   - component: {fileID: 1714852462}
+  - component: {fileID: 1714852461}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2719,10 +2719,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 0.1
   m_AngularDrag: 5
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 0
@@ -2740,11 +2740,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 160141a6e3cd023448dd18c6bebd42a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  horizontal_torque: 2
-  vertical_force: 200
-  max_speed: {x: 15, y: 10}
+  thrust: 250
+  spin_speed: 2.5
+  max_speed: {x: 10, y: 5}
   max_angle: 45
   enforce_max: 1
+  Left: 97
+  Right: 100
 --- !u!232 &1714852462
 DistanceJoint2D:
   m_ObjectHideFlags: 0
@@ -2761,8 +2763,8 @@ DistanceJoint2D:
   m_AutoConfigureConnectedAnchor: 0
   m_Anchor: {x: 0, y: 0}
   m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 0.54999995
+  m_AutoConfigureDistance: 0
+  m_Distance: 0.55
   m_MaxDistanceOnly: 0
 --- !u!1 &1733528895
 GameObject:
