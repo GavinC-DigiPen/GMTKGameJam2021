@@ -1,8 +1,19 @@
-﻿using System.Collections;
+﻿//------------------------------------------------------------------------------
+//
+// File Name:	NormalPlayerController.cs
+// Author(s):	Gavin Cooper
+//
+// Project:		GMTK Game Jam 2021
+//
+// Description: A script that handle movement
+//
+//------------------------------------------------------------------------------
+
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NormalController : MonoBehaviour
+public class NormalPlayerController : MonoBehaviour
 {
     public KeyCode Left = KeyCode.A;
     public KeyCode Right = KeyCode.D;

@@ -20,6 +20,7 @@ public class BoxGrabber : MonoBehaviour
 
     private FixedJoint2D Joint;
     private float BoxGrabTimer = 0;
+    private BoxInfo CurrentBoxScript = null;
 
     // Start is called before the first frame update
     void Start()
@@ -43,22 +44,37 @@ public class BoxGrabber : MonoBehaviour
 
             // Set BoxGrabTimer
             BoxGrabTimer = 0;
+
+            // Set box variable
+            if (CurrentBoxScript != null)
+            {
+                CurrentBoxScript.AttachedToRope = false;
+            }
         }
     }
 
     // Check for collision with box
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Box")
-        {
-            if (Joint.connectedBody == null && BoxGrabTimer > BoxGrabCooldown)
-            {
-                // Attach box to joint
-                Joint.connectedBody = collision.rigidbody;
+        CurrentBoxScript = collision.gameObject.GetComponent<BoxInfo>();
 
-                // Turn on joint
-                Joint.enabled = true;
-            }
+        // Check BoxScript exists
+        if (CurrentBoxScript == null)
+        {
+            return;
+        }
+
+        // Connect joint
+        if (Joint.connectedBody == null && BoxGrabTimer > BoxGrabCooldown)
+        {
+            // Attach box to joint
+            Joint.connectedBody = collision.rigidbody;
+
+            // Turn on joint
+            Joint.enabled = true;
+
+            // Set box variable
+            CurrentBoxScript.AttachedToRope = true;
         }
     }
 }

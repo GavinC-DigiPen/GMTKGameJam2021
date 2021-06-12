@@ -18,5 +18,6 @@ public class BoxInfo : MonoBehaviour
     public int ScoreValue;
     public bool InGoal;
     public bool TouchingEdge;
+    public bool AttachedToRope;
     public string Type = "Default";
 }
