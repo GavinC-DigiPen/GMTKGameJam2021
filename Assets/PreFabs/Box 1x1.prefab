@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7967304540091119796}
   m_Layer: 0
   m_Name: Box 1x1
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -146,4 +146,5 @@ MonoBehaviour:
   ScoreValue: 1
   InGoal: 0
   TouchingEdge: 0
+  AttachedToRope: 0
   Type: Default
