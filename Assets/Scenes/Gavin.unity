@@ -280,7 +280,7 @@ GameObject:
   - component: {fileID: 393683722}
   - component: {fileID: 393683721}
   - component: {fileID: 393683720}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -659,7 +659,7 @@ GameObject:
   - component: {fileID: 519492689}
   - component: {fileID: 519492688}
   - component: {fileID: 519492692}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -843,7 +843,7 @@ GameObject:
   - component: {fileID: 748550018}
   - component: {fileID: 748550017}
   - component: {fileID: 748550021}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -993,7 +993,7 @@ GameObject:
   - component: {fileID: 864464487}
   - component: {fileID: 864464486}
   - component: {fileID: 864464485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1143,7 +1143,7 @@ GameObject:
   - component: {fileID: 872235809}
   - component: {fileID: 872235808}
   - component: {fileID: 872235812}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1458,7 +1458,7 @@ GameObject:
   - component: {fileID: 1069224033}
   - component: {fileID: 1069224032}
   - component: {fileID: 1069224036}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1900,7 +1900,7 @@ GameObject:
   - component: {fileID: 1282435162}
   - component: {fileID: 1282435161}
   - component: {fileID: 1282435165}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2095,7 +2095,7 @@ GameObject:
   - component: {fileID: 1318425712}
   - component: {fileID: 1318425711}
   - component: {fileID: 1318425710}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2280,7 +2280,7 @@ GameObject:
   - component: {fileID: 1376268887}
   - component: {fileID: 1376268886}
   - component: {fileID: 1376268885}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2685,7 +2685,7 @@ GameObject:
   - component: {fileID: 1470862304}
   - component: {fileID: 1470862307}
   - component: {fileID: 1470862305}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Grabber
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3348,7 +3348,7 @@ GameObject:
   - component: {fileID: 1713644941}
   - component: {fileID: 1713644940}
   - component: {fileID: 1713644944}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3499,7 +3499,8 @@ GameObject:
   - component: {fileID: 1714852462}
   - component: {fileID: 1714852459}
   - component: {fileID: 1714852461}
-  m_Layer: 0
+  - component: {fileID: 1714852463}
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3601,7 +3602,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -3617,7 +3618,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1714852456}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6cf6c6b2054ac7547a1d202ce4ff5296, type: 3}
   m_Name: 
@@ -3657,6 +3658,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1714852463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1714852456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 160141a6e3cd023448dd18c6bebd42a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 250
+  spin_speed: 2.5
+  max_speed: {x: 10, y: 5}
+  max_angle: 45
+  enforce_max: 1
+  Left: 97
+  Right: 100
 --- !u!1 &1717612132
 GameObject:
   m_ObjectHideFlags: 0
@@ -3778,7 +3798,7 @@ GameObject:
   - component: {fileID: 1796435347}
   - component: {fileID: 1796435346}
   - component: {fileID: 1796435350}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4036,7 +4056,7 @@ GameObject:
   - component: {fileID: 1884574199}
   - component: {fileID: 1884574198}
   - component: {fileID: 1884574202}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4186,7 +4206,7 @@ GameObject:
   - component: {fileID: 1907281745}
   - component: {fileID: 1907281744}
   - component: {fileID: 1907281743}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4336,7 +4356,7 @@ GameObject:
   - component: {fileID: 1997610392}
   - component: {fileID: 1997610391}
   - component: {fileID: 1997610390}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Rope (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
