@@ -282,7 +282,7 @@ GameObject:
   - component: {fileID: 441148786}
   m_Layer: 0
   m_Name: Box
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -413,6 +413,7 @@ MonoBehaviour:
   ScoreValue: 2
   InGoal: 0
   TouchingEdge: 0
+  AttachedToRope: 0
   Type: Blue
 --- !u!1 &519420028
 GameObject:
@@ -711,7 +712,7 @@ GameObject:
   - component: {fileID: 1209351883}
   m_Layer: 0
   m_Name: Box (1)
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -745,6 +746,7 @@ MonoBehaviour:
   ScoreValue: 1
   InGoal: 0
   TouchingEdge: 0
+  AttachedToRope: 0
   Type: Default
 --- !u!50 &1209351884
 Rigidbody2D:
@@ -1000,7 +1002,7 @@ GameObject:
   - component: {fileID: 1421994735}
   m_Layer: 0
   m_Name: Box (2)
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1034,6 +1036,7 @@ MonoBehaviour:
   ScoreValue: 3
   InGoal: 0
   TouchingEdge: 0
+  AttachedToRope: 0
   Type: Default
 --- !u!50 &1421994736
 Rigidbody2D:
@@ -1379,7 +1382,7 @@ GameObject:
   - component: {fileID: 1538375154}
   m_Layer: 0
   m_Name: Box (3)
-  m_TagString: Box
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1413,6 +1416,7 @@ MonoBehaviour:
   ScoreValue: 5
   InGoal: 0
   TouchingEdge: 0
+  AttachedToRope: 0
   Type: Default
 --- !u!50 &1538375155
 Rigidbody2D:

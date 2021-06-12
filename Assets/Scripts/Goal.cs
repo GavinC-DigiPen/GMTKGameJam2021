@@ -34,6 +34,20 @@ public class Goal : MonoBehaviour
             return;
         }
 
+        // Check if box is attached to rope in goal
+        if (BoxScript.AttachedToRope && BoxScript.InGoal)
+        {
+            GameManager.Score -= BoxScript.ScoreValue;
+
+            BoxScript.InGoal = false;
+        }
+
+        // Check if box is attach to rope
+        if (BoxScript.AttachedToRope)
+        {
+            return;
+        }
+
         // Add or remove score
         if (!BoxScript.TouchingEdge && !BoxScript.InGoal)
         {
