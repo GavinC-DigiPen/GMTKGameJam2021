@@ -31,7 +31,7 @@ public class BoxGrabber : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // Add to BoxGrabTimer
+        // Add to timers
         BoxGrabTimer += Time.deltaTime;
 
         if (Input.GetKey(Drop))
@@ -50,6 +50,11 @@ public class BoxGrabber : MonoBehaviour
             {
                 CurrentBoxScript.AttachedToRope = false;
             }
+        }
+
+        if (BoxGrabTimer < BoxGrabCooldown && CurrentBoxScript != null)
+        {
+            CurrentBoxScript.AttachedToRope = false;
         }
     }
 
