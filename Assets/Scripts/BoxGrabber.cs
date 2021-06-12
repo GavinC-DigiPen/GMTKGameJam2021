@@ -64,7 +64,7 @@ public class BoxGrabber : MonoBehaviour
         CurrentBoxScript = collision.gameObject.GetComponent<BoxInfo>();
 
         // Check BoxScript exists
-        if (CurrentBoxScript == null)
+        if (CurrentBoxScript == null && !collision.gameObject.CompareTag("Moveable"))
         {
             return;
         }
@@ -79,7 +79,10 @@ public class BoxGrabber : MonoBehaviour
             Joint.enabled = true;
 
             // Set box variable
-            CurrentBoxScript.AttachedToRope = true;
+            if (CurrentBoxScript != null)
+            {
+                CurrentBoxScript.AttachedToRope = true;
+            }
         }
     }
 }
