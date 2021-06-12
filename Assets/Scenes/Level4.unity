@@ -1828,7 +1828,7 @@ PrefabInstance:
     - target: {fileID: 7967304540091119787, guid: 0764820dbb5aeb6478889536aaef8c22,
         type: 3}
       propertyPath: m_Name
-      value: Crate 1x1 (1)
+      value: Crate 1x1
       objectReference: {fileID: 0}
     - target: {fileID: 7967304540091119792, guid: 0764820dbb5aeb6478889536aaef8c22,
         type: 3}
@@ -2148,7 +2148,7 @@ PrefabInstance:
     - target: {fileID: 7967304540091119787, guid: 0764820dbb5aeb6478889536aaef8c22,
         type: 3}
       propertyPath: m_Name
-      value: Crate 1x1
+      value: Crate 2x2
       objectReference: {fileID: 0}
     - target: {fileID: 7967304540091119792, guid: 0764820dbb5aeb6478889536aaef8c22,
         type: 3}
