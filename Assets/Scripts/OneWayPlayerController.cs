@@ -112,7 +112,7 @@ public class OneWayPlayerController : MonoBehaviour
         // Add force
         RB.AddForce(DirectionVector * Speed);
 
-        // Fix max speed if needed
+        // Fix speed if needed
         if (RB.velocity[0] >= MaxSpeed[0])
         {
             RB.velocity = new Vector2(MaxSpeed[0], RB.velocity[1]);

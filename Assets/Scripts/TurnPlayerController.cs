@@ -52,7 +52,7 @@ public class TurnPlayerController : MonoBehaviour
         {
             Direction = 1;
         }
-        else if (Input.GetKey(Left) == false && Input.GetKey(Right) == false)
+        else if (!Input.GetKey(Left) && !Input.GetKey(Right))
         {
             Direction = 0;
         }
