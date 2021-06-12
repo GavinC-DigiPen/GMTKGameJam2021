@@ -20,45 +20,61 @@ public class NextLevelController : MonoBehaviour
 {
     public string SceneName;
     public int ScoreNeeded = 10;
+    public float HoldTime = 0f;
+    public float ScreenChangeDelay = 1f;
     public GameObject ScoreBar = null;
 
+    private bool Timer = false;
+    private float HoldTimeTimer = 0;
     private RectTransform ScoreBarTransform = null;
 
     // Start is called before the first frame update
     void Start()
     {
         // Get ScoreBar tranfrom
-        ScoreBarTransform = ScoreBar.GetComponent<RectTransform>();
+        if (ScoreBar != null)
+        {
+            ScoreBarTransform = ScoreBar.GetComponent<RectTransform>();
+        }
 
         // Reset score
         GameManager.Score = 0;
-
-        // CheckScore and add listener to keep track of the score changing
-        CheckScore();
-        GameManager.OnVariablesUpdate.AddListener(CheckScore);
     }
 
-    // Check if the score is high enought to go to the next level
-    void CheckScore()
-    {   
-        // Check if finished
+    // Update is called once per frame
+    void Update()
+    {
+        // Check if score is met
         if (GameManager.Score >= ScoreNeeded)
         {
-            SceneManager.LoadScene(SceneName);
+            // Add to timer
+            HoldTimeTimer += Time.deltaTime;
+
+            // If timer is up, change scene
+            if (HoldTimeTimer >= HoldTime)
+            {
+                Invoke("ChangeScene", ScreenChangeDelay);
+            }
         }
+        else
+        {
+            // Reset timer
+            HoldTimeTimer = 0;
+        }
+
+        Debug.Log(HoldTimeTimer);
 
         // Edit bar
         if (ScoreBar != null)
         {
-            ScoreBarTransform.sizeDelta = new Vector2 (((float)GameManager.Score / (float)ScoreNeeded) * 100f, 100);
-            ScoreBarTransform.localPosition = new Vector2 ((ScoreBarTransform.rect.width - 100f) / 2f, 0);
+            ScoreBarTransform.sizeDelta = new Vector2(((float)GameManager.Score / (float)ScoreNeeded) * 100f, 100);
+            ScoreBarTransform.localPosition = new Vector2((ScoreBarTransform.rect.width - 100f) / 2f, 0);
         }
-        
     }
 
-    //remove listener when destroyed
-    void OnDestory()
+    void ChangeScene()
     {
-        GameManager.OnVariablesUpdate.RemoveListener(CheckScore);
+        SceneManager.LoadScene(SceneName);
     }
+
 }
