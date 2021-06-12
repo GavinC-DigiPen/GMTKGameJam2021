@@ -52,7 +52,7 @@ public class BoxGrabber : MonoBehaviour
             }
         }
 
-        if (BoxGrabTimer < BoxGrabCooldown && CurrentBoxScript != null)
+        if (Joint.connectedBody == null && CurrentBoxScript != null)
         {
             CurrentBoxScript.AttachedToRope = false;
         }
