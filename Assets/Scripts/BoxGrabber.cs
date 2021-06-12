@@ -33,7 +33,7 @@ public class BoxGrabber : MonoBehaviour
         // Add to BoxGrabTimer
         BoxGrabTimer += Time.deltaTime;
 
-        if (Input.GetKeyDown(Drop))
+        if (Input.GetKey(Drop))
         {
             // Dettach box from joint
             Joint.connectedBody = null;
