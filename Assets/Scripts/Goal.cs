@@ -15,12 +15,21 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
-    // Check for box ENTERING area
+    public string Typeing = "Default";
+
+    // Check for box DEING IN area
     private void OnTriggerStay2D(Collider2D collision)
     {
         var BoxScript = collision.gameObject.GetComponent<BoxInfo>();
 
+        // Check BoxScript exists
         if (BoxScript == null)
+        {
+            return;
+        }
+
+        // Check if box and goal match
+        if (BoxScript.Type != Typeing)
         {
             return;
         }
@@ -37,6 +46,31 @@ public class Goal : MonoBehaviour
             GameManager.Score -= BoxScript.ScoreValue;
 
             BoxScript.InGoal = false;
+        }
+    }
+
+    // Check for when EXITING area
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        var BoxScript = collision.gameObject.GetComponent<BoxInfo>();
+
+        // Check BoxScript exists
+        if (BoxScript == null)
+        {
+            return;
+        }
+
+        // Check if box and goal match
+        if (BoxScript.Type != Typeing)
+        {
+            return;
+        }
+
+        // Remove score
+        if (BoxScript.InGoal)
+        {
+            BoxScript.InGoal = false;
+            GameManager.Score -= BoxScript.ScoreValue;
         }
     }
 }
