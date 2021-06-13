@@ -30,6 +30,9 @@ public class NormalPlayerController : MonoBehaviour
     void Start()
     {
         RB = GetComponent<Rigidbody2D>();
+
+        // Fix speed because I used to use update for main loop
+        Speed *= 15;
     }
 
     // Update is called once per frame
@@ -78,8 +81,11 @@ public class NormalPlayerController : MonoBehaviour
         {
             DirectionVector = new Vector2(DirectionVector.x, 0);
         }
+    }
 
-
+    // Update is called consistantly
+    void FixedUpdate()
+    {
         // Add force
         RB.AddForce(DirectionVector * Speed);
 

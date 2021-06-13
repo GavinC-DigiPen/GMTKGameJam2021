@@ -1066,8 +1066,9 @@ GameObject:
   - component: {fileID: 3383178912533733751}
   - component: {fileID: 3383178912533733749}
   - component: {fileID: 3383178912533733736}
-  - component: {fileID: 1151709720117796572}
   - component: {fileID: 5734785230118909251}
+  - component: {fileID: 8024476586313862143}
+  - component: {fileID: 1151709720117796572}
   m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
@@ -1282,6 +1283,39 @@ MonoBehaviour:
   Down: 115
   Speed: 10
   MaxSpeed: {x: 25, y: 25}
+--- !u!114 &5734785230118909251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383178912533733744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aca653f218cb7204484ec863d4a8dc74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneName: 
+  ScoreNeeded: 10
+  HoldTime: 2
+  EffectInterval: 0.2
+  ScreenChangeDelay: 1
+  ScoreBar: {fileID: 0}
+  EffectPrefab: {fileID: 1476684567254845148, guid: 0baa11af58bec284b97d1f91022c3d7f,
+    type: 3}
+--- !u!114 &8024476586313862143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3383178912533733744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eb99b7ef3a7e7245b5de53c342f7a94, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Reset: 114
 --- !u!95 &1151709720117796572
 Animator:
   serializedVersion: 3
@@ -1301,23 +1335,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &5734785230118909251
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3383178912533733744}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aca653f218cb7204484ec863d4a8dc74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SceneName: 
-  ScoreNeeded: 10
-  HoldTime: 0
-  ScreenChangeDelay: 1
-  ScoreBar: {fileID: 0}
 --- !u!1 &3383178912534681235
 GameObject:
   m_ObjectHideFlags: 0

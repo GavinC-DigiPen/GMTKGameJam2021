@@ -21,11 +21,13 @@ public class NextLevelController : MonoBehaviour
     public string SceneName;
     public int ScoreNeeded = 10;
     public float HoldTime = 0f;
+    public float EffectInterval = 0.2f;
     public float ScreenChangeDelay = 1f;
     public GameObject ScoreBar = null;
+    public GameObject EffectPrefab = null;
 
-    private bool Timer = false;
     private float HoldTimeTimer = 0;
+    private float EffectTimer = 0;
     private RectTransform ScoreBarTransform = null;
 
     // Start is called before the first frame update
@@ -49,20 +51,44 @@ public class NextLevelController : MonoBehaviour
         {
             // Add to timer
             HoldTimeTimer += Time.deltaTime;
+            EffectTimer += Time.deltaTime;
 
             // If timer is up, change scene
             if (HoldTimeTimer >= HoldTime)
             {
+                // Summon Effect
+                if (EffectTimer > EffectInterval)
+                {
+                    var effect = Instantiate(EffectPrefab, transform.position, Quaternion.identity);
+                    var main = effect.GetComponent<ParticleSystem>().main;
+                    main.startColor = new Color(0, 255, 0);
+
+                    // Restet Timer
+                    EffectTimer = 0;
+                }
+
+                // Start function to change slide
                 Invoke("ChangeScene", ScreenChangeDelay);
             }
+            else
+            {
+                // Summon effect
+                if (EffectTimer > EffectInterval)
+                {
+                    var effect = Instantiate(EffectPrefab, transform.position, Quaternion.identity);
+                    var main = effect.GetComponent<ParticleSystem>().main;
+                    main.startColor = new Color(255, 255, 0);
+
+                    // Restet Timer
+                    EffectTimer = 0;
+                }
+            }    
         }
         else
         {
             // Reset timer
             HoldTimeTimer = 0;
         }
-
-        Debug.Log(HoldTimeTimer);
 
         // Edit bar
         if (ScoreBar != null)
