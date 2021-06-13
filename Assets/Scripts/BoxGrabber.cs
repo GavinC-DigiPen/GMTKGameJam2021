@@ -20,6 +20,7 @@ public class BoxGrabber : MonoBehaviour
 
     private FixedJoint2D Joint;
     private float BoxGrabTimer = 0;
+    private bool BoxScript = false;
     private BoxInfo CurrentBoxScript = null;
     private Rigidbody2D MostRecentRB = null;
 
@@ -47,13 +48,18 @@ public class BoxGrabber : MonoBehaviour
             BoxGrabTimer = 0;
 
             // Set box variable
-            if (CurrentBoxScript != null)
+            if (BoxScript)
             {
                 CurrentBoxScript.AttachedToRope = false;
             }
         }
 
+        //Trying to make sure AttachedToRope is false when not attached, not sure how much of this works ;(
         if (Joint.connectedBody != MostRecentRB)
+        {
+            CurrentBoxScript.AttachedToRope = false;
+        }
+        else if (Joint.enabled == false && BoxScript)
         {
             CurrentBoxScript.AttachedToRope = false;
         }
@@ -64,13 +70,23 @@ public class BoxGrabber : MonoBehaviour
     {
         // Check BoxScript exists
         var TestBoxScript = collision.gameObject.GetComponent<BoxInfo>();
-        if (TestBoxScript == null && !collision.gameObject.CompareTag("Moveable"))
+        if (TestBoxScript == null)
         {
+            BoxScript = false;
             return;
         }
 
         // If BoxScript exists, then save for later
-        CurrentBoxScript = TestBoxScript;
+        if (CurrentBoxScript != TestBoxScript)
+        {
+            if (BoxScript)
+            {
+                CurrentBoxScript.AttachedToRope = false;
+            }
+            CurrentBoxScript = TestBoxScript;
+            CurrentBoxScript.AttachedToRope = false;
+        }
+        BoxScript = true;
 
         // Connect joint
         if (Joint.connectedBody == null && BoxGrabTimer > BoxGrabCooldown)
