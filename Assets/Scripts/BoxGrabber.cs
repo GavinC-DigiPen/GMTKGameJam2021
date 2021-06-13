@@ -77,15 +77,7 @@ public class BoxGrabber : MonoBehaviour
         }
 
         // If BoxScript exists, then save for later
-        if (CurrentBoxScript != TestBoxScript)
-        {
-            if (BoxScript)
-            {
-                CurrentBoxScript.AttachedToRope = false;
-            }
-            CurrentBoxScript = TestBoxScript;
-            CurrentBoxScript.AttachedToRope = false;
-        }
+        CurrentBoxScript = TestBoxScript;
         BoxScript = true;
 
         // Connect joint
