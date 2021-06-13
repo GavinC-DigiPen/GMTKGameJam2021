@@ -161,7 +161,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6464996298744868142}
   - component: {fileID: 6464996298744868143}
-  - component: {fileID: 6464996298744868136}
+  - component: {fileID: 6758271736135772110}
   - component: {fileID: 6464996298744868141}
   m_Layer: 0
   m_Name: Goal
@@ -235,8 +235,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &6464996298744868136
-BoxCollider2D:
+--- !u!60 &6758271736135772110
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -258,9 +258,16 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: -0.51, y: -0.51}
+      - {x: -0.51, y: 0.51}
+      - {x: 0.51, y: 0.51}
+      - {x: 0.51, y: -0.51}
+    - - {x: -0.6, y: -0.6}
+      - {x: -0.6, y: 0.6}
+      - {x: 0.6, y: 0.6}
+      - {x: 0.6, y: -0.6}
 --- !u!114 &6464996298744868141
 MonoBehaviour:
   m_ObjectHideFlags: 0

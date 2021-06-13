@@ -28,6 +28,19 @@ public class GoalEdge : MonoBehaviour
         BoxScript.TouchingEdge = true;
     }
 
+    // Check for box STAY area
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        var BoxScript = collision.gameObject.GetComponent<BoxInfo>();
+
+        if (BoxScript == null)
+        {
+            return;
+        }
+
+        BoxScript.TouchingEdge = true;
+    }
+
     // Check for box LEAVING area
     private void OnTriggerExit2D(Collider2D collision)
     {
