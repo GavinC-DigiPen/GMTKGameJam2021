@@ -2850,7 +2850,7 @@ PrefabInstance:
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
@@ -2905,12 +2905,12 @@ PrefabInstance:
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1919.9999
       objectReference: {fileID: 0}
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 0
+      value: 1079.9999
       objectReference: {fileID: 0}
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
@@ -2935,12 +2935,27 @@ PrefabInstance:
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
       propertyPath: m_Pivot.x
-      value: 0
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
       propertyPath: m_Pivot.y
-      value: 0
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0148148155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0148148155
+      objectReference: {fileID: 0}
+    - target: {fileID: 5301679184387365721, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0148148155
       objectReference: {fileID: 0}
     - target: {fileID: 5301679184387365725, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
         type: 3}
@@ -2952,6 +2967,11 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1560901790}
+    - target: {fileID: 5301679184387365726, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91494c3bcd6013f4d8cdff4eeaeec2ac, type: 3}
 --- !u!1 &1064854349 stripped
