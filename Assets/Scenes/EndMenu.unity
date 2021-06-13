@@ -3224,7 +3224,7 @@ MonoBehaviour:
       m_Calls: []
   m_text: "In this game your goal is to get enough boxes in the goal area. The more
     boxes in the area, the more the progress bar will fill up. Some boxes are worth
-    more points that others. The level is complete when the progress bar is competely
+    more points than others. The level is complete when the progress bar is competely
     filled up.\n\n\nMovement:\t\tW, A, S, & D\nRelease Rope: \tSpace\nRestart Level:
     \tR"
   m_isRightToLeft: 0
