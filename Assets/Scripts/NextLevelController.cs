@@ -94,6 +94,10 @@ public class NextLevelController : MonoBehaviour
         if (ScoreBar != null)
         {
             ScoreBarTransform.sizeDelta = new Vector2(((float)GameManager.Score / (float)ScoreNeeded) * 100f, 100);
+            if (ScoreBarTransform.sizeDelta.x > 100)
+            {
+                ScoreBarTransform.sizeDelta = new Vector2(100, 100);
+            }
             ScoreBarTransform.localPosition = new Vector2((ScoreBarTransform.rect.width - 100f) / 2f, 0);
         }
     }
