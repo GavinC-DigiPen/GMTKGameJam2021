@@ -76,13 +76,13 @@ public class BoxGrabber : MonoBehaviour
             return;
         }
 
-        // If BoxScript exists, then save for later
-        CurrentBoxScript = TestBoxScript;
-        BoxScript = true;
-
-        // Connect joint
+        // Connect joint, if timer allows
         if (Joint.connectedBody == null && BoxGrabTimer > BoxGrabCooldown)
         {
+            // If BoxScript exists, then save for later
+            CurrentBoxScript = TestBoxScript;
+            BoxScript = true;
+
             // Attach box to joint
             Joint.connectedBody = collision.rigidbody;
             MostRecentRB = collision.rigidbody;
