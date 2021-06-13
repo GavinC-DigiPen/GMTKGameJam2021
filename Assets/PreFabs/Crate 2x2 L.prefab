@@ -148,7 +148,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59aa0fd913bbf25479816799a1f2f7e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ScoreValue: 1
+  ScoreValue: 3
   InGoal: 0
   TouchingEdge: 0
   AttachedToRope: 0
